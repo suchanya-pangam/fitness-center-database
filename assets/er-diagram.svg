@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980" role="img" aria-labelledby="title description">
+  <title id="title">Fitness Center Management System ER Diagram</title>
+  <desc id="description">Entity relationship diagram for the trainer, equipment, and workshop scope of the Fitness Center Management System.</desc>
+  <style>
+    .background { fill: #f8fafc; }
+    .title { font: 700 30px Arial, sans-serif; fill: #0f172a; }
+    .subtitle { font: 16px Arial, sans-serif; fill: #475569; }
+    .table { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; }
+    .header { fill: #1d4ed8; }
+    .header-text { font: 700 16px Arial, sans-serif; fill: #ffffff; }
+    .field { font: 14px Arial, sans-serif; fill: #1e293b; }
+    .key { font-weight: 700; fill: #1d4ed8; }
+    .divider { stroke: #e2e8f0; stroke-width: 1; }
+    .relation { fill: none; stroke: #64748b; stroke-width: 2.5; }
+    .cardinality { font: 700 16px Arial, sans-serif; fill: #dc2626; }
+    .note { font: 13px Arial, sans-serif; fill: #64748b; }
+  </style>
+
+  <rect class="background" width="1500" height="980"/>
+  <text class="title" x="60" y="55">Fitness Center Management System</text>
+  <text class="subtitle" x="60" y="82">ER Diagram - trainer, equipment, and workshop management scope</text>
+
+  <!-- Relationship lines are placed before the tables so connectors stay visually behind them. -->
+  <path class="relation" d="M350 235 H435"/>
+  <text class="cardinality" x="365" y="222">1</text><text class="cardinality" x="410" y="222">N</text>
+
+  <path class="relation" d="M350 630 H435"/>
+  <text class="cardinality" x="365" y="617">1</text><text class="cardinality" x="410" y="617">N</text>
+
+  <path class="relation" d="M1120 410 V475"/>
+  <text class="cardinality" x="1100" y="442">1</text><text class="cardinality" x="1133" y="462">N</text>
+
+  <path class="relation" d="M1100 700 V760"/>
+  <text class="cardinality" x="1080" y="732">1</text><text class="cardinality" x="1113" y="748">N</text>
+
+  <path class="relation" d="M765 242 H840 V835 H900"/>
+  <text class="cardinality" x="780" y="230">1</text><text class="cardinality" x="870" y="822">N</text>
+
+  <path class="relation" d="M205 545 V490 H835 V640 H900"/>
+  <text class="cardinality" x="215" y="477">1</text><text class="cardinality" x="870" y="627">N</text>
+
+  <!-- EQUIPMENT_CATEGORY -->
+  <g transform="translate(60 150)">
+    <rect class="table" width="290" height="170" rx="10"/>
+    <rect class="header" width="290" height="42" rx="10"/>
+    <rect class="header" y="28" width="290" height="14"/>
+    <text class="header-text" x="18" y="27">EQUIPMENT_CATEGORY</text>
+    <text class="field key" x="18" y="75">PK  category_id</text>
+    <line class="divider" x1="14" y1="89" x2="276" y2="89"/>
+    <text class="field" x="18" y="119">category_name</text>
+  </g>
+
+  <!-- EQUIPMENT -->
+  <g transform="translate(435 115)">
+    <rect class="table" width="330" height="255" rx="10"/>
+    <rect class="header" width="330" height="42" rx="10"/>
+    <rect class="header" y="28" width="330" height="14"/>
+    <text class="header-text" x="18" y="27">EQUIPMENT</text>
+    <text class="field key" x="18" y="75">PK  equipment_id</text>
+    <line class="divider" x1="14" y1="89" x2="316" y2="89"/>
+    <text class="field key" x="18" y="119">FK  category_id</text>
+    <line class="divider" x1="14" y1="133" x2="316" y2="133"/>
+    <text class="field" x="18" y="163">equipment_name</text>
+    <line class="divider" x1="14" y1="177" x2="316" y2="177"/>
+    <text class="field" x="18" y="207">quantity</text>
+    <line class="divider" x1="14" y1="221" x2="316" y2="221"/>
+    <text class="field" x="18" y="251">equipment_status</text>
+  </g>
+
+  <!-- WORKSHOP -->
+  <g transform="translate(940 130)">
+    <rect class="table" width="360" height="280" rx="10"/>
+    <rect class="header" width="360" height="42" rx="10"/>
+    <rect class="header" y="28" width="360" height="14"/>
+    <text class="header-text" x="18" y="27">WORKSHOP</text>
+    <text class="field key" x="18" y="75">PK  workshop_number</text>
+    <line class="divider" x1="14" y1="89" x2="346" y2="89"/>
+    <text class="field" x="18" y="119">member_id (reference only)</text>
+    <line class="divider" x1="14" y1="133" x2="346" y2="133"/>
+    <text class="field" x="18" y="163">total_hours</text>
+    <line class="divider" x1="14" y1="177" x2="346" y2="177"/>
+    <text class="field" x="18" y="207">start_date, end_date</text>
+    <line class="divider" x1="14" y1="221" x2="346" y2="221"/>
+    <text class="field" x="18" y="251">fee</text>
+  </g>
+
+  <!-- TRAINER -->
+  <g transform="translate(60 545)">
+    <rect class="table" width="290" height="170" rx="10"/>
+    <rect class="header" width="290" height="42" rx="10"/>
+    <rect class="header" y="28" width="290" height="14"/>
+    <text class="header-text" x="18" y="27">TRAINER</text>
+    <text class="field key" x="18" y="75">PK  trainer_id</text>
+    <line class="divider" x1="14" y1="89" x2="276" y2="89"/>
+    <text class="field" x="18" y="119">trainer_name</text>
+    <line class="divider" x1="14" y1="133" x2="276" y2="133"/>
+    <text class="field" x="18" y="163">contact_info</text>
+  </g>
+
+  <!-- TRAINER_SPECIALTY -->
+  <g transform="translate(435 560)">
+    <rect class="table" width="330" height="140" rx="10"/>
+    <rect class="header" width="330" height="42" rx="10"/>
+    <rect class="header" y="28" width="330" height="14"/>
+    <text class="header-text" x="18" y="27">TRAINER_SPECIALTY</text>
+    <text class="field key" x="18" y="75">PK, FK  trainer_id</text>
+    <line class="divider" x1="14" y1="89" x2="316" y2="89"/>
+    <text class="field key" x="18" y="123">PK  specialty</text>
+  </g>
+
+  <!-- WORKSHOP_DETAIL -->
+  <g transform="translate(900 475)">
+    <rect class="table" width="400" height="225" rx="10"/>
+    <rect class="header" width="400" height="42" rx="10"/>
+    <rect class="header" y="28" width="400" height="14"/>
+    <text class="header-text" x="18" y="27">WORKSHOP_DETAIL</text>
+    <text class="field key" x="18" y="75">PK, FK  workshop_number</text>
+    <line class="divider" x1="14" y1="89" x2="386" y2="89"/>
+    <text class="field key" x="18" y="119">PK  workshop_datetime</text>
+    <line class="divider" x1="14" y1="133" x2="386" y2="133"/>
+    <text class="field key" x="18" y="163">FK  trainer_id</text>
+    <line class="divider" x1="14" y1="177" x2="386" y2="177"/>
+    <text class="field" x="18" y="211">duration_minutes</text>
+  </g>
+
+  <!-- WORKSHOP_DETAIL_EQUIPMENT -->
+  <g transform="translate(900 760)">
+    <rect class="table" width="400" height="170" rx="10"/>
+    <rect class="header" width="400" height="42" rx="10"/>
+    <rect class="header" y="28" width="400" height="14"/>
+    <text class="header-text" x="18" y="27">WORKSHOP_DETAIL_EQUIPMENT</text>
+    <text class="field key" x="18" y="75">PK, FK  workshop_number</text>
+    <line class="divider" x1="14" y1="89" x2="386" y2="89"/>
+    <text class="field key" x="18" y="119">PK, FK  workshop_datetime</text>
+    <line class="divider" x1="14" y1="133" x2="386" y2="133"/>
+    <text class="field key" x="18" y="157">PK, FK  equipment_id</text>
+  </g>
+
+  <text class="note" x="60" y="950">PK = Primary Key   •   FK = Foreign Key   •   Cardinality: 1 = one, N = many</text>
+</svg>

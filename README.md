@@ -6,7 +6,13 @@ This is my individual part of a group database-design project from class. The or
 
 I designed the logical ER diagram, relational schema, data dictionary, and sample reports for trainer, trainer specialty, equipment, equipment category, workshop detail, and workshop-equipment usage tables.
 
-## Entity Relationship Diagram
+## Database Design
+
+This diagram is generated from the current `schema.sql`, so its table names and key relationships match the implementation in this repository.
+
+![Fitness Center Management System ER Diagram](assets/er-diagram.svg)
+
+### Entity Relationship Diagram for This Repository
 
 ```mermaid
 erDiagram
