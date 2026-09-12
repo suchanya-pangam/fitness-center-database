@@ -1,0 +1,17 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Database client and local configuration files
+*.db
+*.sqlite
+*.sqlite3
+*.sql.bak
+*.bak
+*.tmp
+.env
+.env.*
+
+# MySQL Workbench local files
+*.mwb.bak
+*.mwb.autosave
